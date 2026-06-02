@@ -40,8 +40,7 @@ The application federates **four distinct frontend technologies** (React.js, Ang
 15. [Vercel Deployment Instructions](#-vercel-deployment-instructions)
 16. [Non-Functional Requirements (Accessibility, Performance, Security)](#-non-functional-requirements)
 17. [Frontend Modernization Roadmap](#-frontend-modernization-roadmap)
-18. [Resume & Interview Talking Points](#-resume--interview-talking-points)
-19. [Production Grade Improvements](#-what-i-would-improve-in-production)
+18. [Production Grade Improvements](#-what-i-would-improve-in-production)
 
 ---
 
@@ -350,21 +349,6 @@ gantt
     section Phase 4: Production
     Production build verify & Deploy  :active, p7, 2026-04-01, 15d
 ```
-
----
-
-## 👨‍💻 Resume & Interview Talking Points
-
-### Resume Bullet Points:
-* *Designed and orchestrated a federated monorepo modernization platform containing React, Angular 17, Vue 3, and legacy jQuery modules, achieving 100% visual consistency via centralized Sass variables and design tokens.*
-* *Built an interactive gateway control console with real-time AES-256 payload encryption simulation, allowing immediate telemetry analysis across all sub-applications.*
-* *Reduced user onboarding friction for non-technical evaluators by designing a glassmorphic tour walkthrough carousel and a one-click guest authentication bypass pipeline.*
-
-### Interview Talking Points:
-* **How do you keep design consistent across React, Vue, and Angular?**
-  > "We extract variables like color, shadows, and margins into a central file `shared/styles/variables.scss` and compile them using Sass in each sub-app. This ensures absolute styling alignment across different UI frameworks."
-* **What is your strategy for wrapping legacy jQuery apps?**
-  > "Instead of rewriting everything, we wrap the legacy code in a modern JavaScript adapter. The adapter intercepts jQuery DOM actions and propagates clean event payloads to the React parent host."
 
 ---
 
