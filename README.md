@@ -1,4 +1,4 @@
-# 🚀 FlowShift: Enterprise Frontend Modernization Platform
+# 🚀 FinTransit: Enterprise Frontend Modernization Platform
 
 [![React](https://img.shields.io/badge/React-18.2-blue?style=flat-square&logo=react)](https://react.dev/)
 [![Angular](https://img.shields.io/badge/Angular-17.1-red?style=flat-square&logo=angular)](https://angular.dev/)
@@ -9,9 +9,9 @@
 [![Vercel](https://img.shields.io/badge/Vercel-Deploy-black?style=flat-square&logo=vercel)](https://vercel.com/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Top_1%25-gold?style=flat-square)](#)
 
-> **FlowShift** is a premium, production-grade **Frontend Modernization Command Center** built by a Senior Software Engineer (8+ years of experience). It serves as a flagship portfolio project demonstrating advanced micro-frontend orchestration, legacy-to-modern codebase migrations, and unified design token architectures.
+> **FinTransit** is a premium, production-grade **Frontend Modernization Command Center** built by a Senior Software Engineer (8+ years of experience). It serves as a flagship portfolio project demonstrating advanced micro-frontend orchestration, legacy-to-modern codebase migrations, and unified design token architectures.
 
-FlowShift federates **four distinct frontend technologies** (React.js, Angular 17, Vue 3, and legacy jQuery) running concurrently inside a single viewport, managed by a centralized React host portal. Inspired by the minimal, high-contrast aesthetics of **Stripe, Linear, and Vercel**, the application is built to be instantly understood by recruiters and hiring managers within 10 seconds of opening, while containing deep technical architecture under the hood.
+The application federates **four distinct frontend technologies** (React.js, Angular 17, Vue 3, and legacy jQuery) running concurrently inside a single viewport, managed by a centralized React host portal. Inspired by the minimal, high-contrast aesthetics of **Stripe, Linear, and Vercel**, the application is built to be instantly understood by recruiters and hiring managers within 10 seconds of opening, while containing deep technical architecture under the hood.
 
 ---
 
@@ -40,7 +40,7 @@ FlowShift federates **four distinct frontend technologies** (React.js, Angular 1
 ---
 
 ## 🌟 Executive Summary
-In enterprise environments, monolithic codebases eventually suffer from technical debt. Rewriting a massive system from scratch is risky and expensive. **FlowShift** demonstrates a real-world modernization pattern: wrap legacy software components, run stable feature modules in specialized frameworks, and integrate them under a single React orchestration shell using unified styling variables and common data schemas.
+In enterprise environments, monolithic codebases eventually suffer from technical debt. Rewriting a massive system from scratch is risky and expensive. **FinTransit** demonstrates a real-world modernization pattern: wrap legacy software components, run stable feature modules in specialized frameworks, and integrate them under a single React orchestration shell using unified styling variables and common data schemas.
 
 ---
 
@@ -53,7 +53,7 @@ Large financial and corporate institutions often manage separate, disconnected i
 ---
 
 ## 🛠️ The Enterprise Solution
-FlowShift bridges these silos into a single, high-contrast **Operations Command Center**:
+FinTransit bridges these silos into a single, high-contrast **Operations Command Center**:
 * **Central Host**: A lightweight React container handles authentication, route structures, and global user states.
 * **Unified Telemetry**: Live metric cards display Total Customers, Active Accounts, daily transaction volumes, and critical alerts.
 * **Cohesive UX**: A Stripe/Linear-style layout ensures absolute visual consistency, featuring rounded Notion-style cards, smooth hover tilts, and extreme typography contrast.
@@ -61,7 +61,7 @@ FlowShift bridges these silos into a single, high-contrast **Operations Command 
 ---
 
 ## 🦄 Why This Project Is Unique
-Unlike standard portfolio apps, FlowShift implements **active system configuration controls**:
+Unlike standard portfolio apps, FinTransit implements **active system configuration controls**:
 1. **Interactive Platform Onboarding**: A glassmorphic step-by-step tour carousel explaining the architecture.
 2. **One-Click Guest Authentication**: A fast-track bypass button allowing recruiters to explore all dashboards instantly.
 3. **Stateful Gateway Stress Test Simulator**: Recruiter controls to simulate environmental load stress (Low, Medium, High) which dynamically updates alerts, memory footprints, and latency values across the frameworks in real time.
@@ -96,7 +96,7 @@ This project demonstrates how a senior engineer manages a gradual migration path
 
 ## 🗺️ System Architecture (Mermaid)
 
-FlowShift links the modules through a shared domain layer, allowing asset and contract sharing across frameworks:
+FinTransit links the modules through a shared domain layer, allowing asset and contract sharing across frameworks:
 
 ```mermaid
 graph TD
@@ -140,7 +140,7 @@ graph TD
 ---
 
 ## 🔀 Micro-Frontend Strategy
-FlowShift uses a **monorepo-style federation framework wrapper**:
+FinTransit uses a **monorepo-style federation framework wrapper**:
 * **Workspace Isolation**: Each module is self-contained under `apps/` with independent development dependencies, configs, and package registries.
 * **Vite Server Configuration**: The React host's `vite.config.ts` extends its file system permissions to compile TypeScript components directly from the root `shared/` directory:
   ```typescript
@@ -208,7 +208,7 @@ FlowShift uses a **monorepo-style federation framework wrapper**:
 ## 🎨 Shared Design System & API Layer
 
 ### Design System (`shared/styles/`)
-FlowShift features a unified visual style managed via **Sass tokens**:
+FinTransit features a unified visual style managed via **Sass tokens**:
 * `variables.scss`: Holds minimalist slate variables (`$bg-primary: #030303`, `$text-secondary: #f1f5f9`, and neon border glows).
 * `layout.scss`: Sets system-wide high-contrast accessibility rules forcing white text headers. Sets the `perspective-container` and `isometric-card` layout wrappers.
 * `cards.scss`: Configures Linear-style card gradients, rounded borders, and vertical hover translations.
@@ -240,11 +240,11 @@ Guarantees clean, decoupled API contracts across all standalone apps.
 
 ### 📊 Operations CommandCenter Dashboard
 Presents an executive dashboard, Recharts Area charts, recent logs, and the MFE gateway controls.
-![FlowShift CommandCenter Dashboard](/Users/SivaD/Desktop/enterprise-frontend-modernization-platform/screenshots/command-center-dashboard.png)
+![FinTransit CommandCenter Dashboard](/Users/SivaD/Desktop/enterprise-frontend-modernization-platform/screenshots/command-center-dashboard.png)
 
 ### 💻 Modern SaaS Landing Page with 3D Stack Graphic
 Features a minimalist dark layout and a floating 3D perspective micro-frontend stack.
-![FlowShift Landing Page](/Users/SivaD/Desktop/enterprise-frontend-modernization-platform/screenshots/landing-page.png)
+![FinTransit Landing Page](/Users/SivaD/Desktop/enterprise-frontend-modernization-platform/screenshots/landing-page.png)
 
 ---
 
@@ -306,7 +306,7 @@ npm run test:vue
 
 ## ☁️ Vercel Deployment Instructions
 
-FlowShift is pre-configured for Vercel. 
+FinTransit is pre-configured for Vercel. 
 
 To deploy the React host platform:
 1. Install Vercel CLI: `npm install -g vercel`
