@@ -1,0 +1,27 @@
+@import '../../../../shared/styles/variables.scss';
+@import '../../../../shared/styles/mixins.scss';
+
+// Import design system files
+@import '../../../../shared/styles/layout.scss';
+@import '../../../../shared/styles/cards.scss';
+@import '../../../../shared/styles/tables.scss';
+@import '../../../../shared/styles/forms.scss';
+@import '../../../../shared/styles/badges.scss';
+@import '../../../../shared/styles/dashboard.scss';
+
+// Custom Angular overrides for clinical UI
+.clinical-card {
+  background: rgba(239, 68, 68, 0.03) !important;
+  border-color: rgba(239, 68, 68, 0.15) !important;
+}
+
+.clinical-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.3) !important;
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5) !important;
+  }
+}

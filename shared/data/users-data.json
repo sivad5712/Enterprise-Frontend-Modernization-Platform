@@ -1,0 +1,81 @@
+{
+  "users": [
+    {
+      "id": "usr-001",
+      "username": "chief_admin",
+      "email": "admin@operations.enterprise.com",
+      "name": "Alex Mercer",
+      "role": "SUPER_ADMIN",
+      "permissions": [
+        "VIEW_DASHBOARD",
+        "MANAGE_USERS",
+        "APPROVE_TRANSACTIONS",
+        "VIEW_PATIENTS",
+        "EDIT_PATIENTS",
+        "RESTART_SERVICES",
+        "ACCESS_AUDIT_LOGS"
+      ],
+      "status": "ACTIVE",
+      "lastLogin": "2026-06-02T11:00:00-04:00",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces"
+    },
+    {
+      "id": "usr-002",
+      "username": "banking_ops_chief",
+      "email": "ledger-ops@banking.enterprise.com",
+      "name": "Diana Prince",
+      "role": "BANKING_OPERATOR",
+      "permissions": [
+        "VIEW_DASHBOARD",
+        "APPROVE_TRANSACTIONS",
+        "ACCESS_AUDIT_LOGS"
+      ],
+      "status": "ACTIVE",
+      "lastLogin": "2026-06-02T09:12:00-04:00",
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces"
+    },
+    {
+      "id": "usr-003",
+      "username": "clinical_lead",
+      "email": "care.lead@healthcare.enterprise.com",
+      "name": "Stephen Strange",
+      "role": "CLINICAL_MANAGER",
+      "permissions": [
+        "VIEW_DASHBOARD",
+        "VIEW_PATIENTS",
+        "EDIT_PATIENTS"
+      ],
+      "status": "ACTIVE",
+      "lastLogin": "2026-06-02T08:00:00-04:00",
+      "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=faces"
+    },
+    {
+      "id": "usr-004",
+      "username": "devops_lead",
+      "email": "sre@cloud-ops.enterprise.com",
+      "name": "Reed Richards",
+      "role": "DEVOPS_ENGINEER",
+      "permissions": [
+        "VIEW_DASHBOARD",
+        "RESTART_SERVICES",
+        "ACCESS_AUDIT_LOGS"
+      ],
+      "status": "ACTIVE",
+      "lastLogin": "2026-06-02T10:45:00-04:00",
+      "avatarUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=faces"
+    },
+    {
+      "id": "usr-005",
+      "username": "retired_admin",
+      "email": "old-guard@legacy.enterprise.com",
+      "name": "Walter White",
+      "role": "BANKING_OPERATOR",
+      "permissions": [
+        "VIEW_DASHBOARD"
+      ],
+      "status": "SUSPENDED",
+      "lastLogin": "2025-12-15T14:22:00-05:00",
+      "avatarUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=faces"
+    }
+  ]
+}

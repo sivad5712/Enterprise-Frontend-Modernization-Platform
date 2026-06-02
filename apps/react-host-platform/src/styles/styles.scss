@@ -1,0 +1,78 @@
+@import '../../../../shared/styles/variables.scss';
+@import '../../../../shared/styles/mixins.scss';
+
+// Import design system files
+@import '../../../../shared/styles/layout.scss';
+@import '../../../../shared/styles/cards.scss';
+@import '../../../../shared/styles/tables.scss';
+@import '../../../../shared/styles/forms.scss';
+@import '../../../../shared/styles/badges.scss';
+@import '../../../../shared/styles/dashboard.scss';
+
+// Extra styling for Landing Page & Login
+.landing-hero {
+  padding: 8rem 2rem 5rem 2rem;
+  background: radial-gradient(circle at 50% 30%, rgba($brand-indigo, 0.12) 0%, transparent 60%),
+              radial-gradient(circle at 10% 80%, rgba($brand-cyan, 0.05) 0%, transparent 40%),
+              #070a13;
+  min-height: 100vh;
+  @include flex-center(column, center, center);
+}
+
+.landing-nav {
+  height: $topnav-height;
+  background-color: rgba(#070a13, 0.85);
+  backdrop-filter: $glass-backdrop;
+  border-bottom: 1px solid $glass-border;
+  @include flex-center(row, space-between, center);
+  padding: 0 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  
+  @include respond-to(sm) {
+    padding: 0 1.5rem;
+  }
+}
+
+.modernization-timeline {
+  position: relative;
+  padding-left: 2.5rem;
+  border-left: 2px dashed $glass-border;
+  margin-left: 1rem;
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+    
+    .timeline-badge {
+      position: absolute;
+      left: calc(-2.5rem - 11px);
+      top: 4px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: $bg-primary;
+      border: 3px solid $brand-indigo;
+      box-shadow: 0 0 8px $brand-indigo;
+      
+      &.completed {
+        border-color: $status-success;
+        box-shadow: 0 0 8px $status-success;
+      }
+      &.in_progress {
+        border-color: $brand-cyan;
+        box-shadow: 0 0 8px $brand-cyan;
+        animation: pulse-ring 2s infinite;
+      }
+    }
+  }
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.4); }
+  70% { box-shadow: 0 0 0 8px rgba(6, 182, 212, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+}

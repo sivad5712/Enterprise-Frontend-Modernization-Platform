@@ -1,0 +1,195 @@
+{
+  "cloudMetrics": {
+    "overallUptime": 99.982,
+    "activeDeployments": 3,
+    "openIncidentsCount": 2,
+    "totalMonthlySpend": 142580
+  },
+  "services": [
+    {
+      "id": "svc-001",
+      "name": "banking-ledger-api",
+      "environment": "PRODUCTION",
+      "status": "HEALTHY",
+      "version": "v2.14.0",
+      "uptime": 99.99,
+      "latencyMs": 42,
+      "errorRate": 0.02,
+      "cpuUsage": 45,
+      "memoryUsage": 58,
+      "lastDeploy": "2026-06-01T04:12:00Z"
+    },
+    {
+      "id": "svc-002",
+      "name": "healthcare-eligibility-processor",
+      "environment": "PRODUCTION",
+      "status": "DEGRADED",
+      "version": "v1.8.3",
+      "uptime": 99.91,
+      "latencyMs": 385,
+      "errorRate": 2.45,
+      "cpuUsage": 88,
+      "memoryUsage": 82,
+      "lastDeploy": "2026-05-30T10:45:00Z"
+    },
+    {
+      "id": "svc-003",
+      "name": "identity-oauth-gateway",
+      "environment": "PRODUCTION",
+      "status": "HEALTHY",
+      "version": "v3.1.2",
+      "uptime": 100.0,
+      "latencyMs": 18,
+      "errorRate": 0.0,
+      "cpuUsage": 22,
+      "memoryUsage": 41,
+      "lastDeploy": "2026-05-15T08:00:00Z"
+    },
+    {
+      "id": "svc-004",
+      "name": "legacy-admin-reports-service",
+      "environment": "PRODUCTION",
+      "status": "DOWN",
+      "version": "v0.9.1-beta",
+      "uptime": 94.2,
+      "latencyMs": 0,
+      "errorRate": 100.0,
+      "cpuUsage": 0,
+      "memoryUsage": 0,
+      "lastDeploy": "2026-04-10T14:30:00Z"
+    },
+    {
+      "id": "svc-005",
+      "name": "notification-dispatcher",
+      "environment": "STAGING",
+      "status": "HEALTHY",
+      "version": "v2.1.0-rc2",
+      "uptime": 99.85,
+      "latencyMs": 95,
+      "errorRate": 0.1,
+      "cpuUsage": 12,
+      "memoryUsage": 30,
+      "lastDeploy": "2026-06-02T02:00:00Z"
+    }
+  ],
+  "deployments": [
+    {
+      "id": "dep-501",
+      "serviceId": "svc-005",
+      "serviceName": "notification-dispatcher",
+      "version": "v2.1.0-rc2",
+      "environment": "STAGING",
+      "status": "SUCCESS",
+      "deployedAt": "2026-06-02T02:00:00Z",
+      "deployedBy": "CircleCI Admin",
+      "commitHash": "a1b2c3d4",
+      "durationSeconds": 142
+    },
+    {
+      "id": "dep-502",
+      "serviceId": "svc-001",
+      "serviceName": "banking-ledger-api",
+      "version": "v2.14.1",
+      "environment": "PRODUCTION",
+      "status": "IN_PROGRESS",
+      "deployedAt": "2026-06-02T11:00:00Z",
+      "deployedBy": "GitLab CI Runner",
+      "commitHash": "f6g7h8i9",
+      "durationSeconds": 85
+    },
+    {
+      "id": "dep-503",
+      "serviceId": "svc-004",
+      "serviceName": "legacy-admin-reports-service",
+      "version": "v0.9.2-beta",
+      "environment": "PRODUCTION",
+      "status": "FAILED",
+      "deployedAt": "2026-06-02T09:15:00Z",
+      "deployedBy": "Jenkins Legacy Master",
+      "commitHash": "z9y8x7w6",
+      "durationSeconds": 310
+    }
+  ],
+  "incidents": [
+    {
+      "id": "inc-101",
+      "title": "High Latency & CPU Throttling in Eligibility Processor",
+      "serviceId": "svc-002",
+      "serviceName": "healthcare-eligibility-processor",
+      "severity": "HIGH",
+      "status": "INVESTIGATING",
+      "createdAt": "2026-06-02T10:15:00Z",
+      "summary": "Pod restarts observed. CPU utilization spiked past 88% causing response latency to degrade to 385ms.",
+      "assignedTo": "DevOps OnCall Team"
+    },
+    {
+      "id": "inc-102",
+      "title": "Complete Outage on Legacy Reports Module",
+      "serviceId": "svc-004",
+      "serviceName": "legacy-admin-reports-service",
+      "severity": "CRITICAL",
+      "status": "IDENTIFIED",
+      "createdAt": "2026-06-02T09:20:00Z",
+      "summary": "Deployment v0.9.2 failed with a database migration lock exception, corrupting the legacy registry mapping.",
+      "assignedTo": "SRE Reliability Team"
+    }
+  ],
+  "clusters": [
+    {
+      "id": "cls-001",
+      "name": "gcp-prod-us-central",
+      "provider": "GKE",
+      "region": "us-central1",
+      "nodeCount": 24,
+      "cpuCapacityCore": 96,
+      "memoryCapacityGb": 384,
+      "status": "ACTIVE"
+    },
+    {
+      "id": "cls-002",
+      "name": "aws-prod-eu-west",
+      "provider": "EKS",
+      "region": "eu-west-1",
+      "nodeCount": 16,
+      "cpuCapacityCore": 64,
+      "memoryCapacityGb": 256,
+      "status": "ACTIVE"
+    },
+    {
+      "id": "cls-003",
+      "name": "azure-staging-eastus",
+      "provider": "AKS",
+      "region": "eastus2",
+      "nodeCount": 6,
+      "cpuCapacityCore": 24,
+      "memoryCapacityGb": 96,
+      "status": "SCALING"
+    }
+  ],
+  "cloudCosts": [
+    {
+      "id": "cost-001",
+      "billingPeriod": "2026-05",
+      "provider": "GCP",
+      "amount": 78420.5,
+      "currency": "USD",
+      "changePercent": 2.4
+    },
+    {
+      "id": "cost-002",
+      "billingPeriod": "2026-05",
+      "provider": "AWS",
+      "amount": 49210.0,
+      "currency": "USD",
+      "changePercent": -1.2
+    },
+    {
+      "id": "cost-003",
+      "billingPeriod": "2026-05",
+      "provider": "AZURE",
+      "amount": 14949.5,
+      "currency": "USD",
+      "changePercent": 12.8
+    }
+  ]
+}

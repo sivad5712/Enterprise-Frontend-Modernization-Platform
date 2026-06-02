@@ -1,0 +1,86 @@
+@import 'variables';
+@import 'mixins';
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid transparent;
+
+  .badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  &.success, &.healthy, &.active, &.completed, &.paid {
+    background-color: $status-success-bg;
+    color: $status-success;
+    border-color: $status-success-border;
+    .badge-dot { background-color: $status-success; }
+  }
+
+  &.warning, &.degraded, &.pending, &.under_investigation, &.scaling {
+    background-color: $status-warning-bg;
+    color: $status-warning;
+    border-color: $status-warning-border;
+    .badge-dot { background-color: $status-warning; }
+  }
+
+  &.danger, &.down, &.failed, &.suspended, &.critical, &.denied {
+    background-color: $status-danger-bg;
+    color: $status-danger;
+    border-color: $status-danger-border;
+    .badge-dot { background-color: $status-danger; }
+  }
+
+  &.info, &.investigating, &.monitoring, &.resolved {
+    background-color: $status-info-bg;
+    color: $status-info;
+    border-color: $status-info-border;
+    .badge-dot { background-color: $status-info; }
+  }
+
+  &.neutral, &.inactive, &.discharged, &.closed, &.exempt, &.upcoming, &.planned {
+    background-color: $status-neutral-bg;
+    color: $text-secondary;
+    border-color: $status-neutral-border;
+    .badge-dot { background-color: $text-secondary; }
+  }
+}
+
+.severity-indicator {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  color: white;
+
+  &.low {
+    background-color: $status-info;
+  }
+  &.medium {
+    background-color: $status-warning;
+  }
+  &.high {
+    background-color: #f97316; // Orange
+  }
+  &.critical {
+    background-color: $status-danger;
+    animation: alert-blink 1.5s infinite;
+  }
+}
+
+@keyframes alert-blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; box-shadow: 0 0 10px rgba($status-danger, 0.4); }
+  100% { opacity: 1; }
+}

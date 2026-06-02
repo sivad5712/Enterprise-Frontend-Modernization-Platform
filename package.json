@@ -1,0 +1,18 @@
+{
+  "name": "enterprise-frontend-modernization-platform",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Enterprise-grade frontend modernization command center consolidating React, Angular, Vue, and legacy jQuery modules.",
+  "scripts": {
+    "dev:react": "cd apps/react-host-platform && npm run dev",
+    "dev:angular": "cd apps/angular-healthcare-module && npm start",
+    "dev:vue": "cd apps/vue-cloud-ops-module && npm run dev",
+    "serve:jquery": "cd apps/jquery-legacy-admin-module && npx serve .",
+    "build:react": "cd apps/react-host-platform && npm run build",
+    "build:angular": "cd apps/angular-healthcare-module && npm run build",
+    "build:vue": "cd apps/vue-cloud-ops-module && npm run build",
+    "test:react": "cd apps/react-host-platform && npm test",
+    "test:angular": "cd apps/angular-healthcare-module && npm test",
+    "test:vue": "cd apps/vue-cloud-ops-module && npm test"
+  }
+}

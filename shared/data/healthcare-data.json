@@ -1,0 +1,219 @@
+{
+  "healthcareMetrics": {
+    "totalMembersTracked": 142050,
+    "openCareGaps": 3120,
+    "pendingClaims": 418,
+    "highRiskMembersCount": 1284,
+    "averageHccRiskScore": 2.14
+  },
+  "members": [
+    {
+      "id": "member-001",
+      "mrn": "MRN-890214",
+      "firstName": "John",
+      "lastName": "Connor",
+      "dob": "1985-02-28",
+      "gender": "Male",
+      "phone": "+1-555-0199",
+      "email": "john.connor@sky-ops.net",
+      "address": "123 Resistance Way, Los Angeles, CA 90001",
+      "primaryPayer": "Blue Cross Shield",
+      "riskScore": 4.25,
+      "assignedCareManagerId": "mgr-501",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "member-002",
+      "mrn": "MRN-301982",
+      "firstName": "Bruce",
+      "lastName": "Banner",
+      "dob": "1969-12-18",
+      "gender": "Male",
+      "phone": "+1-555-0100",
+      "email": "hulk@avengers.org",
+      "address": "Sandbox Laboratory, Sector 7, NM 87501",
+      "primaryPayer": "UnitedHealth Group",
+      "riskScore": 9.15,
+      "assignedCareManagerId": "mgr-501",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "member-003",
+      "mrn": "MRN-451029",
+      "firstName": "Selina",
+      "lastName": "Kyle",
+      "dob": "1992-07-23",
+      "gender": "Female",
+      "phone": "+1-555-0242",
+      "email": "selina@gotham-alley.com",
+      "address": "742 Alleycat Apt 3B, Gotham City, NJ 07001",
+      "primaryPayer": "Aetna",
+      "riskScore": 1.45,
+      "assignedCareManagerId": "mgr-502",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "member-004",
+      "mrn": "MRN-110099",
+      "firstName": "Hal",
+      "lastName": "Jordan",
+      "dob": "1980-05-05",
+      "gender": "Male",
+      "phone": "+1-555-2814",
+      "email": "hal.jordan@green-corp.org",
+      "address": "1 Sector 2814 Road, Coast City, CA 93401",
+      "primaryPayer": "Cigna",
+      "riskScore": 2.8,
+      "assignedCareManagerId": "mgr-502",
+      "status": "DISCHARGED"
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim-601",
+      "memberId": "member-002",
+      "memberName": "Bruce Banner",
+      "claimNumber": "CLM-90812401",
+      "serviceDate": "2026-05-15",
+      "providerName": "Gamma Radiology Specialists",
+      "diagnosisCodes": ["D64.9", "R53.83"],
+      "totalCharged": 2450.0,
+      "totalAllowed": 1820.0,
+      "status": "PAID"
+    },
+    {
+      "id": "claim-602",
+      "memberId": "member-002",
+      "memberName": "Bruce Banner",
+      "claimNumber": "CLM-90812402",
+      "serviceDate": "2026-05-28",
+      "providerName": "Metropolis Anger Management",
+      "diagnosisCodes": ["F43.23", "Z63.0"],
+      "totalCharged": 350.0,
+      "totalAllowed": 0.0,
+      "status": "DENIED"
+    },
+    {
+      "id": "claim-603",
+      "memberId": "member-001",
+      "memberName": "John Connor",
+      "claimNumber": "CLM-11048201",
+      "serviceDate": "2026-05-20",
+      "providerName": "Trauma Recovery Associates",
+      "diagnosisCodes": ["F43.10"],
+      "totalCharged": 1250.0,
+      "totalAllowed": 1100.0,
+      "status": "PENDING"
+    }
+  ],
+  "careGaps": [
+    {
+      "id": "gap-701",
+      "memberId": "member-002",
+      "memberName": "Bruce Banner",
+      "gapName": "Annual Cardiovascular Assessment",
+      "measureCode": "HEDIS-CBP",
+      "status": "OPEN",
+      "openedDate": "2026-01-01",
+      "dueDate": "2026-09-30",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "gap-702",
+      "memberId": "member-002",
+      "memberName": "Bruce Banner",
+      "gapName": "Heavy Metal Toxicity Screening",
+      "measureCode": "HEDIS-TOX",
+      "status": "OPEN",
+      "openedDate": "2026-03-10",
+      "dueDate": "2026-07-15",
+      "severity": "HIGH"
+    },
+    {
+      "id": "gap-703",
+      "memberId": "member-001",
+      "memberName": "John Connor",
+      "gapName": "Post-Traumatic Stress Screening",
+      "measureCode": "HEDIS-PTSD",
+      "status": "CLOSED",
+      "openedDate": "2026-02-15",
+      "dueDate": "2026-08-15",
+      "severity": "MEDIUM"
+    },
+    {
+      "id": "gap-704",
+      "memberId": "member-003",
+      "memberName": "Selina Kyle",
+      "gapName": "Annual Preventive Care Visit",
+      "measureCode": "HEDIS-AMB",
+      "status": "OPEN",
+      "openedDate": "2026-01-10",
+      "dueDate": "2026-12-31",
+      "severity": "LOW"
+    }
+  ],
+  "riskScores": [
+    {
+      "id": "risk-801",
+      "memberId": "member-002",
+      "score": 9.15,
+      "trend": "UP",
+      "lastAssessmentDate": "2026-05-28",
+      "riskCategory": "COMPLEX"
+    },
+    {
+      "id": "risk-802",
+      "memberId": "member-001",
+      "score": 4.25,
+      "trend": "STABLE",
+      "lastAssessmentDate": "2026-05-20",
+      "riskCategory": "HIGH"
+    },
+    {
+      "id": "risk-803",
+      "memberId": "member-003",
+      "score": 1.45,
+      "trend": "DOWN",
+      "lastAssessmentDate": "2026-04-12",
+      "riskCategory": "LOW"
+    }
+  ],
+  "observations": [
+    {
+      "id": "obs-901",
+      "memberId": "member-002",
+      "timestamp": "2026-06-02T08:00:00Z",
+      "type": "HEART_RATE",
+      "value": "188",
+      "unit": "bpm",
+      "status": "CRITICAL"
+    },
+    {
+      "id": "obs-902",
+      "memberId": "member-002",
+      "timestamp": "2026-06-02T08:05:00Z",
+      "type": "BLOOD_PRESSURE",
+      "value": "190/115",
+      "unit": "mmHg",
+      "status": "CRITICAL"
+    },
+    {
+      "id": "obs-903",
+      "memberId": "member-001",
+      "timestamp": "2026-06-01T14:30:00Z",
+      "type": "GLUCOSE",
+      "value": "104",
+      "unit": "mg/dL",
+      "status": "NORMAL"
+    },
+    {
+      "id": "obs-904",
+      "memberId": "member-003",
+      "timestamp": "2026-05-30T10:15:00Z",
+      "type": "WEIGHT",
+      "value": "56.4",
+      "unit": "kg",
+      "status": "NORMAL"
+    }
+  ]
+}

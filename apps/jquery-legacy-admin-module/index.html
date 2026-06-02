@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Legacy Operations Console (Admin)</title>
+    <!-- Bootstrap CSS (Legacy style wrapper but clean) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="legacy-body">
+
+    <!-- Top Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+        <div class="container-fluid px-4">
+            <span class="navbar-brand d-flex align-items-center gap-2">
+                <div class="logo-circle bg-danger"><i class="fa fa-terminal"></i></div>
+                <span>Enterprise Legacy Ops Console <small class="text-danger">[v0.9.1-beta]</small></span>
+            </span>
+            <div class="d-flex text-secondary gap-3 align-items-center">
+                <span><i class="fa-solid fa-server text-warning me-1"></i> Mode: Read/Write Legacy Database</span>
+                <span class="badge bg-secondary p-2">Session: ACTIVE (Admin)</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container-fluid px-4 py-4">
+        <div class="alert alert-warning border-warning-subtle d-flex justify-content-between align-items-center" role="alert">
+            <div>
+                <i class="fa-solid fa-triangle-exclamation me-2"></i>
+                <strong>Modernization Notice:</strong> This legacy module is scheduled for depreciation. Active migration pipeline progress is currently at <strong>35%</strong>.
+            </div>
+            <a href="/modernization-roadmap" class="btn btn-sm btn-outline-dark" id="lnk-roadmap"><i class="fa-solid fa-map"></i> View Roadmap</a>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar / Metrics Panel -->
+            <div class="col-md-3">
+                <div class="card mb-4 bg-dark text-light border-secondary">
+                    <div class="card-header border-secondary bg-secondary bg-opacity-25">
+                        <h5 class="card-title mb-0"><i class="fa-solid fa-chart-pie me-2"></i>Legacy Analytics</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="metric-item mb-3">
+                            <label class="text-secondary small">LEGACY USER DATABASE REACH</label>
+                            <h3 class="mb-0 text-white" id="legacy-user-count">0</h3>
+                        </div>
+                        <hr class="border-secondary">
+                        <div class="metric-item mb-3">
+                            <label class="text-secondary small">CRITICAL AUDIT LOG EVENTS</label>
+                            <h3 class="mb-0 text-danger" id="critical-log-count">0</h3>
+                        </div>
+                        <hr class="border-secondary">
+                        <div class="metric-item">
+                            <label class="text-secondary small">OPEN SUPPORT TICKETS</label>
+                            <h3 class="mb-0 text-warning" id="open-ticket-count">0</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Tabs -->
+                <div class="list-group mb-4 legacy-nav">
+                    <button class="list-group-item list-group-item-action active" data-tab="users">
+                        <i class="fa-solid fa-users me-2"></i>User Management
+                    </button>
+                    <button class="list-group-item list-group-item-action" data-tab="audit">
+                        <i class="fa-solid fa-list-check me-2"></i>System Audit Logs
+                    </button>
+                    <button class="list-group-item list-group-item-action" data-tab="tickets">
+                        <i class="fa-solid fa-headset me-2"></i>Support Tickets
+                    </button>
+                    <button class="list-group-item list-group-item-action" data-tab="settings">
+                        <i class="fa-solid fa-sliders me-2"></i>Legacy Settings
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="col-md-9">
+                <!-- Section 1: User Management -->
+                <div id="sec-users" class="tab-section">
+                    <div class="card bg-dark text-light border-secondary">
+                        <div class="card-header border-secondary bg-secondary bg-opacity-25 d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0"><i class="fa-solid fa-users-gear me-2"></i>Legacy Identity Management</h5>
+                            <button class="btn btn-sm btn-danger" id="btn-add-user"><i class="fa-solid fa-user-plus me-1"></i> Add User</button>
+                        </div>
+                        <div class="card-body">
+                            <!-- Filters -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-secondary border-secondary text-white"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                        <input type="text" id="usr-search" class="form-control bg-dark text-white border-secondary" placeholder="Search user by name, email or role...">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-flex gap-2">
+                                    <select id="filter-status" class="form-select bg-dark text-white border-secondary">
+                                        <option value="ALL">All Statuses</option>
+                                        <option value="ACTIVE">Active</option>
+                                        <option value="SUSPENDED">Suspended</option>
+                                    </select>
+                                    <button class="btn btn-secondary border-secondary" id="btn-reset-users"><i class="fa-solid fa-rotate-left"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Users Table -->
+                            <div class="table-responsive">
+                                <table class="table table-dark table-hover border-secondary" id="tbl-users">
+                                    <thead>
+                                        <tr class="border-secondary">
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Username</th>
+                                            <th>Email</th>
+                                            <th>Role</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="users-tbody">
+                                        <!-- Dynamic content -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Audit Logs -->
+                <div id="sec-audit" class="tab-section d-none">
+                    <div class="card bg-dark text-light border-secondary">
+                        <div class="card-header border-secondary bg-secondary bg-opacity-25">
+                            <h5 class="mb-0"><i class="fa-solid fa-file-shield me-2"></i>Security Audit Logger</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-dark table-hover border-secondary">
+                                    <thead>
+                                        <tr class="border-secondary">
+                                            <th>Time</th>
+                                            <th>User</th>
+                                            <th>Category</th>
+                                            <th>Action</th>
+                                            <th>IP Address</th>
+                                            <th>Severity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="audit-tbody">
+                                        <!-- Dynamic content -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-center mt-3">
+                                <button class="btn btn-outline-light btn-sm" id="btn-load-more-audit"><i class="fa-solid fa-arrow-down-long me-1"></i> Load More Logs</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Support Tickets -->
+                <div id="sec-tickets" class="tab-section d-none">
+                    <div class="card bg-dark text-light border-secondary">
+                        <div class="card-header border-secondary bg-secondary bg-opacity-25">
+                            <h5 class="mb-0"><i class="fa-solid fa-circle-question me-2"></i>Operational Support Dashboard</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-dark table-hover border-secondary">
+                                    <thead>
+                                        <tr class="border-secondary">
+                                            <th>ID</th>
+                                            <th>Title</th>
+                                            <th>Priority</th>
+                                            <th>Status</th>
+                                            <th>Reported By</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tickets-tbody">
+                                        <!-- Dynamic content -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4: Legacy Settings -->
+                <div id="sec-settings" class="tab-section d-none">
+                    <div class="card bg-dark text-light border-secondary">
+                        <div class="card-header border-secondary bg-secondary bg-opacity-25">
+                            <h5 class="mb-0"><i class="fa-solid fa-gears me-2"></i>Legacy System Config</h5>
+                        </div>
+                        <div class="card-body">
+                            <form id="frm-settings" class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small">LEGACY DB TIMEOUT (MS)</label>
+                                    <input type="number" class="form-control bg-dark text-white border-secondary" id="db-timeout" value="15000">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small">MAX BATCH EXPORT ROWS</label>
+                                    <input type="number" class="form-control bg-dark text-white border-secondary" id="batch-rows" value="5000">
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-check form-switch mt-2">
+                                        <input class="form-check-input bg-dark border-secondary" type="checkbox" role="switch" id="allow-legacy-writes" checked>
+                                        <label class="form-check-label text-secondary small" for="allow-legacy-writes">ALLOW LEGACY DATABASE INLINE WRITES (UNSAFE)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-danger"><i class="fa-solid fa-floppy-disk me-1"></i> Save Configuration</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Add User Modal -->
+    <div class="modal fade text-light" id="addUserModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark border-secondary">
+                <div class="modal-header border-secondary bg-secondary bg-opacity-25">
+                    <h5 class="modal-title"><i class="fa-solid fa-user-plus me-2"></i>Register Legacy Identity</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="frm-add-user" novalidate>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="new-name" class="form-label text-secondary small">FULL NAME</label>
+                            <input type="text" class="form-control bg-dark text-white border-secondary" id="new-name" required>
+                            <div class="invalid-feedback">Please enter a valid full name (min 3 chars).</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="new-username" class="form-label text-secondary small">USERNAME</label>
+                            <input type="text" class="form-control bg-dark text-white border-secondary" id="new-username" required>
+                            <div class="invalid-feedback">Username must be unique alphanumeric (min 4 chars).</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="new-email" class="form-label text-secondary small">EMAIL ADDRESS</label>
+                            <input type="email" class="form-control bg-dark text-white border-secondary" id="new-email" required>
+                            <div class="invalid-feedback">Please provide a valid corporate email address.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="new-role" class="form-label text-secondary small">SYSTEM OPERATIONAL ROLE</label>
+                            <select class="form-select bg-dark text-white border-secondary" id="new-role" required>
+                                <option value="SUPER_ADMIN">SUPER_ADMIN</option>
+                                <option value="BANKING_OPERATOR">BANKING_OPERATOR</option>
+                                <option value="CLINICAL_MANAGER">CLINICAL_MANAGER</option>
+                                <option value="DEVOPS_ENGINEER">DEVOPS_ENGINEER</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-secondary">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-danger"><i class="fa-solid fa-save me-1"></i> Register Identity</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert toast-like notification wrapper -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+        <div id="toast-notify" class="toast bg-dark text-white border-secondary" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-secondary bg-opacity-25 text-white border-secondary">
+                <strong class="me-auto" id="toast-title">Notification</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="toast-body">
+                Identity registered successfully!
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS Bundle (Includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Legacy JS Scripts -->
+    <script type="module" src="js/api.js"></script>
+    <script type="module" src="js/users.js"></script>
+    <script type="module" src="js/auditLogs.js"></script>
+    <script type="module" src="js/tickets.js"></script>
+    <script type="module" src="js/validation.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

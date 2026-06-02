@@ -1,0 +1,74 @@
+[
+  {
+    "id": "log-001",
+    "timestamp": "2026-06-02T11:05:00Z",
+    "userId": "usr-001",
+    "username": "chief_admin",
+    "role": "SUPER_ADMIN",
+    "action": "USER_LOGIN_SUCCESS",
+    "category": "SECURITY",
+    "severity": "LOW",
+    "ipAddress": "192.168.1.104",
+    "details": "Super Admin successfully authenticated via multi-factor authentication (MFA) token."
+  },
+  {
+    "id": "log-002",
+    "timestamp": "2026-06-02T11:01:00Z",
+    "userId": "usr-005",
+    "username": "retired_admin",
+    "role": "BANKING_OPERATOR",
+    "action": "UNAUTHORIZED_TRANSFER_ATTEMPT",
+    "category": "SECURITY",
+    "severity": "CRITICAL",
+    "ipAddress": "185.220.101.42",
+    "details": "Failed transfer attempt of $99,999 from account US-CHECK-0101 by suspended account 'retired_admin' routed through known Tor exit node IP."
+  },
+  {
+    "id": "log-003",
+    "timestamp": "2026-06-02T10:45:00Z",
+    "userId": "usr-002",
+    "username": "banking_ops_chief",
+    "role": "BANKING_OPERATOR",
+    "action": "SUSPICIOUS_TRANSACTION_REVIEW",
+    "category": "TRANSACTION",
+    "severity": "HIGH",
+    "ipAddress": "192.168.1.112",
+    "details": "Initiated fraud review request for Transaction tx-203 ($890,000 to S.H.I.E.L.D. Logistics) due to abnormal category threshold."
+  },
+  {
+    "id": "log-004",
+    "timestamp": "2026-06-02T10:15:00Z",
+    "userId": "usr-003",
+    "username": "clinical_lead",
+    "role": "CLINICAL_MANAGER",
+    "action": "PATIENT_RECORD_VIEW",
+    "category": "PATIENT_DATA",
+    "severity": "LOW",
+    "ipAddress": "10.200.45.22",
+    "details": "Accessed Electronic Health Record (EHR) of member 'Bruce Banner' (MRN-301982) for risk category update."
+  },
+  {
+    "id": "log-005",
+    "timestamp": "2026-06-02T09:20:00Z",
+    "userId": "usr-004",
+    "username": "devops_lead",
+    "role": "DEVOPS_ENGINEER",
+    "action": "DEPLOYMENT_FAILURE_INVESTIGATION",
+    "category": "INFRASTRUCTURE",
+    "severity": "HIGH",
+    "ipAddress": "10.200.12.8",
+    "details": "Inspected error logs for failed deployment dep-503 on service 'legacy-admin-reports-service' indicating database schema locks."
+  },
+  {
+    "id": "log-006",
+    "timestamp": "2026-06-02T08:05:00Z",
+    "userId": "system",
+    "username": "system",
+    "role": "SUPER_ADMIN",
+    "action": "CRITICAL_OBSERVATION_ALERT",
+    "category": "PATIENT_DATA",
+    "severity": "CRITICAL",
+    "ipAddress": "127.0.0.1",
+    "details": "Telemetry engine triggered alert. Member 'Bruce Banner' registered blood pressure observations of 190/115 mmHg (CRITICAL status)."
+  }
+]

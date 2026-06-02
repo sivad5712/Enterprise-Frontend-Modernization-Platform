@@ -1,0 +1,111 @@
+@import 'variables';
+@import 'mixins';
+
+.dashboard-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+  @include respond-to(lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include respond-to(sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard-analytics-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+  @include respond-to(lg) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard-split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+  @include respond-to(md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.modernization-inspect-panel {
+  @include glass-card(1.5rem, rgba($bg-secondary, 0.4));
+  border: 1px dashed rgba($brand-indigo, 0.3);
+  margin-top: 1.5rem;
+
+  .inspect-header {
+    @include flex-center(row, space-between, center);
+    border-bottom: 1px solid $glass-border;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+
+    .inspect-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: $brand-indigo;
+      @include text-gradient($brand-indigo, $brand-cyan);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  .inspect-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    @include respond-to(sm) {
+      grid-template-columns: 1fr;
+    }
+
+    .inspect-metric {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      padding: 0.75rem;
+      border-radius: $border-radius-md;
+      
+      .metric-label {
+        font-size: 0.75rem;
+        color: $text-secondary;
+        margin-bottom: 0.25rem;
+      }
+      .metric-value {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: $text-primary;
+      }
+    }
+  }
+
+  .inspect-challenges {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    
+    .challenge-list {
+      padding-left: 1.25rem;
+      margin: 0.5rem 0 0 0;
+      color: $text-secondary;
+      
+      li {
+        margin-bottom: 0.35rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import '../../../../shared/styles/variables.scss';
+@import '../../../../shared/styles/mixins.scss';
+
+// Let's import other shared layouts
+@import '../../../../shared/styles/layout.scss';
+@import '../../../../shared/styles/cards.scss';
+@import '../../../../shared/styles/tables.scss';
+@import '../../../../shared/styles/forms.scss';
+@import '../../../../shared/styles/badges.scss';
+@import '../../../../shared/styles/dashboard.scss';
+
+// Add some Vue SRE custom enhancements
+.sre-widget {
+  background: rgba(6, 182, 212, 0.05) !important;
+  border-color: rgba(6, 182, 212, 0.15) !important;
+}
+
+.vue-container {
+  display: flex;
+  min-height: 100vh;
+}
+.vue-main {
+  flex: 1;
+  padding: 1.5rem;
+}
+.vue-nav-link {
+  color: $text-secondary;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: $border-radius-sm;
+  transition: $transition-fast;
+
+  &:hover {
+    color: $text-primary;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  &.router-link-active {
+    color: $brand-cyan;
+    background: rgba($brand-cyan, 0.08);
+  }
+}

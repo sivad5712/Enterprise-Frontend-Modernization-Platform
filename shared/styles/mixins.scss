@@ -1,0 +1,87 @@
+@import 'variables';
+
+// Responsive breakpoint mixins
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: 575.98px) { @content; }
+  }
+  @else if $breakpoint == sm {
+    @media (max-width: 767.98px) { @content; }
+  }
+  @else if $breakpoint == md {
+    @media (max-width: 991.98px) { @content; }
+  }
+  @else if $breakpoint == lg {
+    @media (max-width: 1199.98px) { @content; }
+  }
+  @else if $breakpoint == xl {
+    @media (min-width: 1200px) { @content; }
+  }
+}
+
+// Glassmorphic Premium Card mixin
+@mixin glass-card($padding: 1.5rem, $bg: $bg-card) {
+  background: $bg;
+  backdrop-filter: $glass-backdrop;
+  -webkit-backdrop-filter: $glass-backdrop;
+  border: 1px solid $glass-border;
+  border-radius: $border-radius-lg;
+  padding: $padding;
+  box-shadow: $card-shadow;
+  transition: $transition-smooth;
+
+  &:hover {
+    border-color: rgba($brand-indigo, 0.25);
+    box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.6), 0 0 15px rgba($brand-indigo, 0.05);
+    transform: translateY(-2px);
+  }
+}
+
+// Flex Center Layout helpers
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Custom Scrollbar styling mixin
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $bg-tertiary;
+    border-radius: $border-radius-sm;
+    &:hover {
+      background: rgba($brand-indigo, 0.5);
+    }
+  }
+}
+
+// Typography gradient header mixin
+@mixin text-gradient($start: $brand-indigo, $end: $brand-cyan) {
+  background: linear-gradient(135deg, $start, $end);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Table Wrapper container mixin
+@mixin table-container {
+  overflow-x: auto;
+  border: 1px solid $glass-border;
+  border-radius: $border-radius-md;
+  background: $bg-secondary;
+  @include custom-scrollbar;
+}
+
+// Focus state accessibility outline mixin
+@mixin focus-outline {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba($brand-indigo, 0.4);
+}

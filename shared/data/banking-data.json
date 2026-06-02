@@ -1,0 +1,227 @@
+{
+  "bankingMetrics": {
+    "totalAssetsUnderManagement": 2450890000,
+    "activeAccountsCount": 18450,
+    "dailyTransactionVolume": 12845000,
+    "fraudAlertsOpen": 8,
+    "monthlyGrowthRate": 4.8
+  },
+  "customers": [
+    {
+      "id": "cust-001",
+      "name": "Sarah Connor",
+      "email": "sarah.connor@sky-ops.net",
+      "riskScore": 12,
+      "kycStatus": "APPROVED",
+      "joinedDate": "2023-04-12"
+    },
+    {
+      "id": "cust-002",
+      "name": "Bruce Wayne",
+      "email": "bruce@waynecorp.com",
+      "riskScore": 45,
+      "kycStatus": "APPROVED",
+      "joinedDate": "2021-08-30"
+    },
+    {
+      "id": "cust-003",
+      "name": "Tony Stark",
+      "email": "tony@starkindustries.com",
+      "riskScore": 88,
+      "kycStatus": "PENDING",
+      "joinedDate": "2024-01-15"
+    },
+    {
+      "id": "cust-004",
+      "name": "Ellen Ripley",
+      "email": "ripley@nostromo.org",
+      "riskScore": 5,
+      "kycStatus": "APPROVED",
+      "joinedDate": "2022-11-02"
+    },
+    {
+      "id": "cust-005",
+      "name": "Neo Anderson",
+      "email": "neo@zion.net",
+      "riskScore": 95,
+      "kycStatus": "REJECTED",
+      "joinedDate": "2025-05-19"
+    }
+  ],
+  "accounts": [
+    {
+      "id": "acc-101",
+      "customerId": "cust-001",
+      "accountNumber": "US-CHECK-9081",
+      "type": "CHECKING",
+      "balance": 142500.5,
+      "currency": "USD",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "acc-102",
+      "customerId": "cust-002",
+      "accountNumber": "US-INVEST-0007",
+      "type": "INVESTMENT",
+      "balance": 845900250.0,
+      "currency": "USD",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "acc-103",
+      "customerId": "cust-003",
+      "accountNumber": "US-CHECK-3000",
+      "type": "CHECKING",
+      "balance": 4590800.25,
+      "currency": "USD",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "acc-104",
+      "customerId": "cust-003",
+      "accountNumber": "US-SAVINGS-3001",
+      "type": "SAVINGS",
+      "balance": 24000850.0,
+      "currency": "USD",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "acc-105",
+      "customerId": "cust-004",
+      "accountNumber": "US-SAVINGS-4242",
+      "type": "SAVINGS",
+      "balance": 89450.75,
+      "currency": "USD",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "acc-106",
+      "customerId": "cust-005",
+      "accountNumber": "US-CHECK-0101",
+      "type": "CHECKING",
+      "balance": 0.0,
+      "currency": "USD",
+      "status": "FROZEN"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "tx-201",
+      "accountId": "acc-101",
+      "customerName": "Sarah Connor",
+      "amount": 2500.0,
+      "type": "PAYMENT",
+      "status": "COMPLETED",
+      "timestamp": "2026-06-02T10:15:00Z",
+      "merchant": "Cyberdyne Systems Corp",
+      "category": "RETAIL",
+      "isSuspicious": false
+    },
+    {
+      "id": "tx-202",
+      "accountId": "acc-102",
+      "customerName": "Bruce Wayne",
+      "amount": 12500000.0,
+      "type": "TRANSFER",
+      "status": "COMPLETED",
+      "timestamp": "2026-06-02T09:30:00Z",
+      "merchant": "Lucius Fox Trust",
+      "category": "FINANCE",
+      "isSuspicious": false
+    },
+    {
+      "id": "tx-203",
+      "accountId": "acc-103",
+      "customerName": "Tony Stark",
+      "amount": 890000.0,
+      "type": "PAYMENT",
+      "status": "COMPLETED",
+      "timestamp": "2026-06-02T10:45:00Z",
+      "merchant": "S.H.I.E.L.D. Logistics",
+      "category": "UTILITIES",
+      "isSuspicious": true
+    },
+    {
+      "id": "tx-204",
+      "accountId": "acc-105",
+      "customerName": "Ellen Ripley",
+      "amount": 125.5,
+      "type": "WITHDRAWAL",
+      "status": "COMPLETED",
+      "timestamp": "2026-06-02T08:12:00Z",
+      "merchant": "Weyland-Yutani Cantina",
+      "category": "TRAVEL",
+      "isSuspicious": false
+    },
+    {
+      "id": "tx-205",
+      "accountId": "acc-106",
+      "customerName": "Neo Anderson",
+      "amount": 99999.0,
+      "type": "TRANSFER",
+      "status": "FAILED",
+      "timestamp": "2026-06-02T11:01:00Z",
+      "merchant": "Zion Mainframe Access",
+      "category": "FINANCE",
+      "isSuspicious": true
+    },
+    {
+      "id": "tx-206",
+      "accountId": "acc-104",
+      "customerName": "Tony Stark",
+      "amount": 500000.0,
+      "type": "TRANSFER",
+      "status": "PENDING",
+      "timestamp": "2026-06-02T11:05:00Z",
+      "merchant": "Pepper Potts Management",
+      "category": "FINANCE",
+      "isSuspicious": false
+    }
+  ],
+  "fraudAlerts": [
+    {
+      "id": "alert-301",
+      "transactionId": "tx-203",
+      "accountNumber": "US-CHECK-3000",
+      "customerName": "Tony Stark",
+      "amount": 890000.0,
+      "timestamp": "2026-06-02T10:45:00Z",
+      "score": 82,
+      "severity": "HIGH",
+      "status": "NEW",
+      "triggerReason": "Unusually high transaction volume for utility category from international IP address"
+    },
+    {
+      "id": "alert-302",
+      "transactionId": "tx-205",
+      "accountNumber": "US-CHECK-0101",
+      "customerName": "Neo Anderson",
+      "amount": 99999.0,
+      "timestamp": "2026-06-02T11:01:00Z",
+      "score": 98,
+      "severity": "CRITICAL",
+      "status": "UNDER_INVESTIGATION",
+      "triggerReason": "Transfer attempt from frozen account linked to a proxy network"
+    }
+  ],
+  "reports": [
+    {
+      "id": "rep-401",
+      "title": "Q2-2026 Executive Asset Ledger",
+      "generatedAt": "2026-06-01T23:59:59Z",
+      "generatedBy": "System Scheduler",
+      "format": "PDF",
+      "downloadUrl": "/reports/q2-ledger.pdf",
+      "size": "4.2 MB"
+    },
+    {
+      "id": "rep-402",
+      "title": "Daily Fraud Risk Assessment",
+      "generatedAt": "2026-06-02T06:00:00Z",
+      "generatedBy": "AI Threat Detector",
+      "format": "CSV",
+      "downloadUrl": "/reports/daily-risk.csv",
+      "size": "218 KB"
+    }
+  ]
+}

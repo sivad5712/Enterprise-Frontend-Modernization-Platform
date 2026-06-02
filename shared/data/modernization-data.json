@@ -1,0 +1,231 @@
+{
+  "legacyApplications": [
+    {
+      "id": "leg-app-001",
+      "name": "Global Admin Console",
+      "technology": "jQuery 1.11, Bootstrap 3.1, raw AJAX",
+      "linesOfCode": 145000,
+      "complexityScore": "CRITICAL",
+      "modernizationStatus": "IN_PROGRESS",
+      "migrationProgress": 35,
+      "businessValue": "HIGH",
+      "estimatedRetirementDate": "2026-12-31"
+    },
+    {
+      "id": "leg-app-002",
+      "name": "Clinical Claims Portal",
+      "technology": "AngularJS 1.5, Gulp, CSS2",
+      "linesOfCode": 320000,
+      "complexityScore": "HIGH",
+      "modernizationStatus": "COMPLETED",
+      "migrationProgress": 100,
+      "businessValue": "HIGH",
+      "estimatedRetirementDate": "2026-05-30"
+    },
+    {
+      "id": "leg-app-003",
+      "name": "Cloud Cost Calculator",
+      "technology": "Vanilla JS, static HTML/CSS, inline XMLHttpRequests",
+      "linesOfCode": 18000,
+      "complexityScore": "MEDIUM",
+      "modernizationStatus": "COMPLETED",
+      "migrationProgress": 100,
+      "businessValue": "MEDIUM",
+      "estimatedRetirementDate": "2026-03-15"
+    },
+    {
+      "id": "leg-app-004",
+      "name": "Retail Core Banking Ledger",
+      "technology": "COBOL, green-screen emulators, ASP.NET Web Forms wrapper",
+      "linesOfCode": 1200000,
+      "complexityScore": "CRITICAL",
+      "modernizationStatus": "PENDING",
+      "migrationProgress": 5,
+      "businessValue": "CRITICAL",
+      "estimatedRetirementDate": "2028-06-30"
+    }
+  ],
+  "modernizationStages": [
+    {
+      "id": "stage-1",
+      "phaseNumber": 1,
+      "title": "Legacy Analysis & Discovery",
+      "description": "Comprehensive scan of application catalogs, dependency charting, complexity indexing, and API readiness evaluation.",
+      "status": "COMPLETED",
+      "startDate": "2025-01-01",
+      "endDate": "2025-03-31",
+      "keyDeliverables": [
+        "Monolith dependency matrix document",
+        "Legacy lines-of-code and complexity audits",
+        "Modernization blueprint and roadmap approval"
+      ]
+    },
+    {
+      "id": "stage-2",
+      "phaseNumber": 2,
+      "title": "API Extraction & Core Foundation",
+      "description": "Creating robust RESTful APIs around legacy backends. Developing shared TypeScript data definitions and mock API structures.",
+      "status": "COMPLETED",
+      "startDate": "2025-04-01",
+      "endDate": "2025-09-30",
+      "keyDeliverables": [
+        "Enterprise API Gateway configuration",
+        "Shared TypeScript schema registry",
+        "Unified design system variables and mixins"
+      ]
+    },
+    {
+      "id": "stage-3",
+      "phaseNumber": 3,
+      "title": "Incremental Module Migration",
+      "description": "Phased migrations. AngularJS claims portal transitioned to Angular 17. SRE calculators rewritten in Vue 3. React Core Host Shell established.",
+      "status": "IN_PROGRESS",
+      "startDate": "2025-10-01",
+      "endDate": "2026-06-30",
+      "keyDeliverables": [
+        "Vite+React Host Shell deployment",
+        "Angular healthcare module production build",
+        "Vue DevOps telemetry widgets integrated"
+      ]
+    },
+    {
+      "id": "stage-4",
+      "phaseNumber": 4,
+      "title": "Legacy Admin Retirement",
+      "description": "Gradual phase-out of the jQuery Global Admin Console. Transitioning features to React micro-frontends.",
+      "status": "UPCOMING",
+      "startDate": "2026-07-01",
+      "endDate": "2026-12-31",
+      "keyDeliverables": [
+        "React-based identity management launch",
+        "jQuery database write locks deactivated",
+        "Complete retirement of AngularJS and jQuery dependencies"
+      ]
+    }
+  ],
+  "migrationRisks": [
+    {
+      "id": "risk-001",
+      "title": "Loss of Undocumented Legacy Rules",
+      "description": "Undocumented banking constraints and calculation logic baked directly into legacy jQuery DOM event listeners.",
+      "impact": "CRITICAL",
+      "probability": "HIGH",
+      "mitigationStrategy": "Exhaustive functional integration test runs comparing React outputs directly against jQuery live endpoints.",
+      "status": "MONITORED"
+    },
+    {
+      "id": "risk-002",
+      "title": "Performance Regression in Data Grids",
+      "description": "SRE/DevOps grids rendering large tables with thousands of Kubernetes event payloads on slow hardware.",
+      "impact": "MEDIUM",
+      "probability": "MEDIUM",
+      "mitigationStrategy": "Leveraging virtualized list scrolling (e.g. vue-virtual-scroller) and server-side paging contracts.",
+      "status": "MITIGATED"
+    },
+    {
+      "id": "risk-003",
+      "title": "Session Synchronicity Across MFEs",
+      "description": "Loss of synchronization of authentication status between React Host and the Angular healthcare clinical application.",
+      "impact": "HIGH",
+      "probability": "HIGH",
+      "mitigationStrategy": "Implementation of a light shared BroadcastChannel and unified window event listeners.",
+      "status": "MITIGATED"
+    }
+  ],
+  "successMetrics": [
+    {
+      "id": "metric-001",
+      "category": "PERFORMANCE",
+      "metricName": "Lighthouse Performance Score",
+      "baselineValue": "34/100",
+      "targetValue": "90/100",
+      "currentValue": "88/100",
+      "unit": "Score"
+    },
+    {
+      "id": "metric-002",
+      "category": "DEVELOPER_VELOCITY",
+      "metricName": "Time to Release New Features",
+      "baselineValue": "42 days",
+      "targetValue": "5 days",
+      "currentValue": "6 days",
+      "unit": "Days"
+    },
+    {
+      "id": "metric-003",
+      "category": "RELIABILITY",
+      "metricName": "SRE Severity-1 Outage Incidents",
+      "baselineValue": "8 per month",
+      "targetValue": "< 1 per quarter",
+      "currentValue": "0 this quarter",
+      "unit": "Incidents"
+    },
+    {
+      "id": "metric-004",
+      "category": "SECURITY",
+      "metricName": "Third-Party CVE Dependency Audits",
+      "baselineValue": "42 CVE issues",
+      "targetValue": "0 critical vulnerabilities",
+      "currentValue": "0 vulnerabilities",
+      "unit": "CVEs"
+    }
+  ],
+  "roadmapTimeline": [
+    {
+      "id": "road-001",
+      "quarter": "2025-Q1",
+      "title": "Discovery & Legacy Complexity Audit",
+      "targetFramework": "SHARED",
+      "dependencies": [],
+      "status": "COMPLETED"
+    },
+    {
+      "id": "road-002",
+      "quarter": "2025-Q2",
+      "title": "Shared Domain Models & Common Style Base",
+      "targetFramework": "SHARED",
+      "dependencies": ["road-001"],
+      "status": "COMPLETED"
+    },
+    {
+      "id": "road-003",
+      "quarter": "2025-Q3",
+      "title": "API extraction and Gateway design",
+      "targetFramework": "SHARED",
+      "dependencies": ["road-002"],
+      "status": "COMPLETED"
+    },
+    {
+      "id": "road-004",
+      "quarter": "2025-Q4",
+      "title": "Angular healthcare MFE base architecture",
+      "targetFramework": "ANGULAR",
+      "dependencies": ["road-003"],
+      "status": "COMPLETED"
+    },
+    {
+      "id": "road-005",
+      "quarter": "2026-Q1",
+      "title": "Vue DevOps modules deployment",
+      "targetFramework": "VUE",
+      "dependencies": ["road-003"],
+      "status": "COMPLETED"
+    },
+    {
+      "id": "road-006",
+      "quarter": "2026-Q2",
+      "title": "Core React Host Shell integration",
+      "targetFramework": "REACT",
+      "dependencies": ["road-004", "road-005"],
+      "status": "IN_PROGRESS"
+    },
+    {
+      "id": "road-007",
+      "quarter": "2026-Q3",
+      "title": "Full Legacy Admin deprecation & swap",
+      "targetFramework": "REACT",
+      "dependencies": ["road-006"],
+      "status": "PLANNED"
+    }
+  ]
+}

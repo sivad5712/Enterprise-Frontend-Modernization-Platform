@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Builds
+dist/
+dist-ssr/
+*.local
+out-tsc/
+
+# IDEs & System
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Environment Variables
+.env
+.env.production
+.env.development
+.env.local
+.env.development.local
+.env.production.local

@@ -1,0 +1,64 @@
+// Minimalist High-Contrast SaaS variables (Stripe / Linear / Vercel style)
+
+// 1. Extreme Contrast Palette (Obsidian & Crisp Silver)
+$bg-primary: #030303;       // True pure black for absolute contrast
+$bg-secondary: #0c0d12;     // Premium deep navy-slate card background
+$bg-tertiary: #171821;      // Focus & highlights
+$bg-card: #0c0d12;
+
+$text-primary: #ffffff;     // Pure white headings for crisp legibility
+$text-secondary: #f1f5f9;   // Slate-100 for outstanding readable paragraphs
+$text-tertiary: #94a3b8;    // Slate-400 for subtext
+
+// Neon Brand Accents (Linear style glow tags)
+$brand-indigo: #6366f1;     // Vibrant violet
+$brand-indigo-hover: #4f46e5;
+$brand-indigo-glow: rgba(99, 102, 241, 0.2);
+
+$brand-cyan: #06b6d4;       // Neon SRE Cyan
+$brand-teal: #14b8a6;
+
+// Core Semantic Statuses
+$status-success: #10b981;
+$status-success-bg: rgba(16, 185, 129, 0.08);
+$status-success-border: rgba(16, 185, 129, 0.2);
+
+$status-warning: #f59e0b;
+$status-warning-bg: rgba(245, 158, 11, 0.08);
+$status-warning-border: rgba(245, 158, 11, 0.2);
+
+$status-danger: #ef4444;
+$status-danger-bg: rgba(239, 68, 68, 0.08);
+$status-danger-border: rgba(239, 68, 68, 0.2);
+
+$status-info: #3b82f6;
+$status-info-bg: rgba(59, 130, 246, 0.08);
+$status-info-border: rgba(59, 130, 246, 0.2);
+
+$status-neutral: #64748b;
+$status-neutral-bg: rgba(100, 116, 139, 0.08);
+$status-neutral-border: rgba(100, 116, 139, 0.2);
+
+// Typography (Crisp Google Fonts)
+$font-family-sans: 'Outfit', 'Inter', -apple-system, sans-serif;
+$font-family-mono: 'Fira Code', Consolas, monospace;
+
+// Layout Grid Dimensions
+$sidebar-width: 250px;
+$topnav-height: 64px;
+
+// Rounded Corners
+$border-radius-sm: 8px;
+$border-radius-md: 14px;
+$border-radius-lg: 20px;
+$border-radius-xl: 28px;
+
+// Parallax Perspective Shadows
+$card-shadow: 0 1px 3px rgba(0,0,0,0.2), 0 20px 50px -15px rgba(0,0,0,0.6);
+$glow-shadow: 0 0 25px rgba(99, 102, 241, 0.25);
+$glass-border: rgba(255, 255, 255, 0.08);
+$glass-backdrop: blur(12px);
+
+// Transitions
+$transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+$transition-fast: all 0.15s ease-out;
