@@ -6,7 +6,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-purple?style=flat-square&logo=bootstrap)](https://getbootstrap.com/)
 [![Sass](https://img.shields.io/badge/Sass-3.0-pink?style=flat-square&logo=sass)](https://sass-lang.com/)
-[![Vercel](https://img.shields.io/badge/Vercel-Deploy-black?style=flat-square&logo=vercel)](https://vercel.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-Live_Demo-black?style=flat-square&logo=vercel)](https://enterprise-frontend-modernization-p.vercel.app)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Top_1%25-gold?style=flat-square)](#)
 
 > **FinTransit** is a premium, production-grade **Frontend Modernization Command Center** built by a Senior Software Engineer (8+ years of experience). It serves as a flagship portfolio project demonstrating advanced micro-frontend orchestration, legacy-to-modern codebase migrations, and unified design token architectures.
@@ -308,11 +308,11 @@ npm run test:vue
 
 FinTransit is pre-configured for Vercel. 
 
-To deploy the React host platform:
-1. Install Vercel CLI: `npm install -g vercel`
-2. Navigate to the host directory: `cd apps/react-host-platform`
-3. Run Vercel deploy: `vercel`
-4. Deploy to production: `vercel --prod`
+* **Live Demo URL**: [https://enterprise-frontend-modernization-p.vercel.app](https://enterprise-frontend-modernization-p.vercel.app)
+
+To deploy updates manually:
+1. Navigate to the root directory: `cd /Users/SivaD/Desktop/enterprise-frontend-modernization-platform`
+2. Deploy to production using CLI workspaces configuration: `npx vercel --prod`
 
 ---
 
