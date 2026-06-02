@@ -1,0 +1,12 @@
+{
+  "buildCommand": "npm install --prefix apps/react-host-platform && npm run build:react",
+  "outputDirectory": "apps/react-host-platform/dist",
+  "framework": "vite",
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

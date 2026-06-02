@@ -1,18 +1,21 @@
 {
   "name": "enterprise-frontend-modernization-platform",
   "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
   "version": "1.0.0",
   "description": "Enterprise-grade frontend modernization command center consolidating React, Angular, Vue, and legacy jQuery modules.",
   "scripts": {
-    "dev:react": "cd apps/react-host-platform && npm run dev",
-    "dev:angular": "cd apps/angular-healthcare-module && npm start",
-    "dev:vue": "cd apps/vue-cloud-ops-module && npm run dev",
-    "serve:jquery": "cd apps/jquery-legacy-admin-module && npx serve .",
-    "build:react": "cd apps/react-host-platform && npm run build",
-    "build:angular": "cd apps/angular-healthcare-module && npm run build",
-    "build:vue": "cd apps/vue-cloud-ops-module && npm run build",
-    "test:react": "cd apps/react-host-platform && npm test",
-    "test:angular": "cd apps/angular-healthcare-module && npm test",
-    "test:vue": "cd apps/vue-cloud-ops-module && npm test"
+    "dev:react": "npm run --prefix apps/react-host-platform dev",
+    "dev:angular": "npm start --prefix apps/angular-healthcare-module",
+    "dev:vue": "npm run --prefix apps/vue-cloud-ops-module dev",
+    "serve:jquery": "npx serve apps/jquery-legacy-admin-module",
+    "build:react": "npm run --prefix apps/react-host-platform build",
+    "build:angular": "npm run --prefix apps/angular-healthcare-module build",
+    "build:vue": "npm run --prefix apps/vue-cloud-ops-module build",
+    "test:react": "npm test --prefix apps/react-host-platform",
+    "test:angular": "npm test --prefix apps/angular-healthcare-module",
+    "test:vue": "npm test --prefix apps/vue-cloud-ops-module"
   }
 }
