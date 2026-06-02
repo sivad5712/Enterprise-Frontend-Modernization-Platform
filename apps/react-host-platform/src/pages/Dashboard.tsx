@@ -64,7 +64,7 @@ export const Dashboard: React.FC = () => {
     },
     {
       id: "angular",
-      name: "Angular Healthcare Container",
+      name: "Angular Accounts Portal",
       version: "v17.1.0",
       status: "connected",
       statusText: "ONLINE",
@@ -73,11 +73,11 @@ export const Dashboard: React.FC = () => {
       icon: "fa-brands fa-angular",
       themeColor: "#ef4444",
       path: "/healthcare",
-      role: "Clinical Care registries, MRN validation & RxJS search"
+      role: "Customer onboarding, account setups & validation routing"
     },
     {
       id: "vue",
-      name: "Vue.js Cloud Telemetry",
+      name: "Vue.js Transaction Monitor",
       version: "v3.4.0",
       status: "connected",
       statusText: "SYNCING",
@@ -86,7 +86,7 @@ export const Dashboard: React.FC = () => {
       icon: "fa-brands fa-vuejs",
       themeColor: "#10b981",
       path: "/cloud-ops",
-      role: "SRE infrastructure nodes grid & alerts telemetry"
+      role: "Real-time payment volumes and system performance tracking"
     },
     {
       id: "jquery",
@@ -105,8 +105,8 @@ export const Dashboard: React.FC = () => {
 
   // Dynamic Audit Logs
   const [auditLogs, setAuditLogs] = useState<AuditLog[]>([
-    { timestamp: "12:04:12", system: "VUE_MFE_BRIDGE", event: "Cloud Operations metrics synchronized. 18 host nodes reported HEALTHY.", type: "success" },
-    { timestamp: "12:02:45", system: "ANGULAR_MFE", event: "Secure MRN cohort routing filter successfully debounced via RxJS (300ms delay).", type: "info" },
+    { timestamp: "12:04:12", system: "VUE_MFE_BRIDGE", event: "Transaction telemetry synchronized. All processing hubs reported healthy.", type: "success" },
+    { timestamp: "12:02:45", system: "ANGULAR_MFE", event: "Secure account routing filter successfully debounced via RxJS (300ms delay).", type: "info" },
     { timestamp: "12:00:30", system: "LEGACY_JQUERY", event: "Bypassed 14 outdated DOM event listeners, routing legacy logs to React host state.", type: "warning" },
     { timestamp: "11:58:15", system: "PLATFORM_CORE", event: "Alex Mercer authorized successfully. Session JWT token parsed in 1.4ms.", type: "success" }
   ]);

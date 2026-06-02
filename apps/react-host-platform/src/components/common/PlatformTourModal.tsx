@@ -22,7 +22,7 @@ export const PlatformTourModal: React.FC<PlatformTourModalProps> = ({
       title: "The Modernization Problem",
       badge: "BUSINESS VISION",
       icon: "fa-solid fa-lightbulb",
-      description: "Large financial enterprises often suffer from fragmented internal systems. Legacy admin portals, telemetry dashboards, and clinical care trackers exist as isolated silos across different technologies.",
+      description: "Large financial enterprises often suffer from fragmented internal systems. Legacy admin portals, telemetry dashboards, and client verification logs exist as isolated silos across different technologies.",
       highlight: "This platform unifies legacy silos into a single, high-performance executive dashboard, showing how companies migrate monolithic interfaces to modern architectures without disruption.",
       color: "#6366f1"
     },
@@ -33,9 +33,9 @@ export const PlatformTourModal: React.FC<PlatformTourModalProps> = ({
       description: "Under the hood, this unified portal hosts and communicates with four distinct frontend technologies, simulating a state-of-the-art micro-frontend federation:",
       bullets: [
         { tech: "React.js Host", desc: "Coordinates user sessions, routing, state management, and executive KPIs." },
-        { tech: "Angular Standalone", desc: "Runs clinical healthcare modules, reactive searches, and robust guard patterns." },
-        { tech: "Vue.js Telemetry", desc: "Monitors live SRE cloud ops grids and high-frequency Node statuses." },
-        { tech: "Legacy jQuery", desc: "Simulates legacy customer ticketing system adapters running concurrently." }
+        { tech: "Angular Standalone", desc: "Runs client setup portals, IBAN verification rules, and robust guard patterns." },
+        { tech: "Vue.js Telemetry", desc: "Monitors live transaction settlements and currency exchange pings." },
+        { tech: "Legacy jQuery", desc: "Simulates legacy support desks and ticketing adapters running concurrently." }
       ],
       highlight: "All 4 technologies run in harmony, showcasing senior-level engineering capabilities in system federation, shared SCSS tokens, and TypeScript validation rules.",
       color: "#06b6d4"

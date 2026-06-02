@@ -6,14 +6,14 @@ export const HealthcareModule: React.FC = () => {
     <div>
       <PageHeader 
         breadcrumbs="COMMAND CENTER / MICRO-FRONTEND INTERFACE"
-        title="Clinical Care Module"
-        description="Federates healthcare clinical registries, patient observations data, and claims adjudication metrics."
+        title="Account Registry Portal"
+        description="Federates client onboardings, account setup queues, and KYC/AML compliance tracking verification pipelines."
       />
 
       <div className="alert alert-danger bg-danger bg-opacity-10 border-danger border-opacity-20 d-flex justify-content-between align-items-center mb-4" role="alert">
         <div>
           <i className="fa-solid fa-circle-info me-2 text-danger"></i>
-          <strong>Clinical Operations Sandbox:</strong> Running integrated Angular 17 micro-frontend simulation workspace.
+          <strong>Operations Registry Sandbox:</strong> Running integrated Angular 17 micro-frontend simulation workspace.
         </div>
         <span className="badge bg-danger">STATE: COMPLETED</span>
       </div>
@@ -24,7 +24,7 @@ export const HealthcareModule: React.FC = () => {
           <div className="card bg-dark text-light border-secondary shadow-lg">
             <div className="card-header border-secondary bg-secondary bg-opacity-25 d-flex justify-content-between align-items-center">
               <span className="d-flex align-items-center gap-2">
-                <i className="fa-solid fa-square-heart text-danger"></i>
+                <i className="fa-solid fa-users text-danger"></i>
                 <strong className="text-white small font-monospace">Angular MFE Simulator Workspace [Port 4200]</strong>
               </span>
               <div className="d-flex gap-1">
@@ -36,10 +36,10 @@ export const HealthcareModule: React.FC = () => {
               
               {/* Simulator Header */}
               <div className="bg-secondary bg-opacity-10 border-bottom border-secondary py-3 px-4 d-flex justify-content-between align-items-center">
-                <span className="small font-monospace text-secondary"><i className="fa-solid fa-shield-halved me-1 text-danger"></i> Secure Health Domain Gateway</span>
+                <span className="small font-monospace text-secondary"><i className="fa-solid fa-shield-halved me-1 text-danger"></i> Secure Account Domain Gateway</span>
                 <div className="d-flex gap-3 small text-secondary">
                   <span>Manager: <strong>Stephen Strange</strong></span>
-                  <span>MRNs Active: <strong>4</strong></span>
+                  <span>Accounts Active: <strong>4</strong></span>
                 </div>
               </div>
 
@@ -49,19 +49,19 @@ export const HealthcareModule: React.FC = () => {
                   <div className="col-sm-6">
                     <div className="p-3 bg-dark border border-secondary rounded d-flex justify-content-between align-items-center">
                       <div>
-                        <div className="text-secondary small">PATIENTS TRACKED</div>
+                        <div className="text-secondary small">ACCOUNTS PROCESSED</div>
                         <h4 className="mb-0 text-white font-bold">142,050</h4>
                       </div>
-                      <i className="fa-solid fa-hospital-user text-danger fa-2x"></i>
+                      <i className="fa-solid fa-wallet text-danger fa-2x"></i>
                     </div>
                   </div>
                   <div className="col-sm-6">
                     <div className="p-3 bg-dark border border-secondary rounded d-flex justify-content-between align-items-center">
                       <div>
-                        <div className="text-secondary small">HCC RISK SCORE</div>
-                        <h4 className="mb-0 text-success font-bold">2.14</h4>
+                        <div className="text-secondary small">COMPLIANCE RATING</div>
+                        <h4 className="mb-0 text-success font-bold">99.8%</h4>
                       </div>
-                      <i className="fa-solid fa-heart-pulse text-success fa-2x"></i>
+                      <i className="fa-solid fa-circle-check text-success fa-2x"></i>
                     </div>
                   </div>
                 </div>
@@ -69,33 +69,33 @@ export const HealthcareModule: React.FC = () => {
                 {/* Patient Table Simulator view */}
                 <div className="border border-secondary rounded bg-dark p-3">
                   <div className="d-flex justify-content-between align-items-center mb-3">
-                    <h6 className="mb-0 text-white"><i className="fa-solid fa-address-book me-2 text-danger"></i>Active Care Gaps</h6>
-                    <span className="badge bg-danger">2 Urgent Gaps</span>
+                    <h6 className="mb-0 text-white"><i className="fa-solid fa-address-book me-2 text-danger"></i>Pending Verifications</h6>
+                    <span className="badge bg-danger">2 Urgent Audits</span>
                   </div>
                   
                   <div className="table-responsive">
                     <table className="table table-dark table-striped border-secondary mb-0 small">
                       <thead>
                         <tr>
-                          <th>MRN</th>
-                          <th>Member Name</th>
-                          <th>Measure Gaps</th>
-                          <th>Severity</th>
-                          <th>Due Date</th>
+                          <th>Account ID</th>
+                          <th>Account Owner</th>
+                          <th>Verification Check</th>
+                          <th>Priority</th>
+                          <th>SLA Target</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td><code>MRN-301982</code></td>
+                          <td><code>ACC-301982</code></td>
                           <td><strong>Bruce Banner</strong></td>
-                          <td>Annual Cardiovascular Assessment</td>
+                          <td>KYC Documentation Audit</td>
                           <td><span className="badge bg-danger">CRITICAL</span></td>
                           <td className="text-secondary">2026-09-30</td>
                         </tr>
                         <tr>
-                          <td><code>MRN-301982</code></td>
+                          <td><code>ACC-301982</code></td>
                           <td><strong>Bruce Banner</strong></td>
-                          <td>Heavy Metal Toxicity Screening</td>
+                          <td>Anti-Money Laundering (AML) Screening</td>
                           <td><span className="badge bg-warning text-dark">HIGH</span></td>
                           <td className="text-secondary">2026-07-15</td>
                         </tr>
@@ -143,8 +143,8 @@ export const HealthcareModule: React.FC = () => {
                   <h6 className="text-white small mb-2">Modernization Architecture Highlights:</h6>
                   <ul className="text-secondary small ps-3">
                     <li className="mb-2"><strong>RxJS Debounced Searches:</strong> Solves frame stutters during keyboard listings query events by routing keypress entries through 300ms debounce pipes.</li>
-                    <li className="mb-2"><strong>Compliance Guards:</strong> Standard functional guards prevent unauthorized corporate staff from launching clinical patient registries.</li>
-                    <li className="mb-2"><strong>Reactive Forms:</strong> Extends deep custom validators for clinical diagnoses codes matching (ICD-10 regex).</li>
+                    <li className="mb-2"><strong>Compliance Guards:</strong> Standard functional guards prevent unauthorized corporate staff from accessing restricted account opening portals.</li>
+                    <li className="mb-2"><strong>Reactive Forms:</strong> Extends custom validators for strict routing and account number checksum matching (IBAN regex).</li>
                   </ul>
                 </div>
               </div>
