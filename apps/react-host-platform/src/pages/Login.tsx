@@ -69,7 +69,7 @@ export const Login: React.FC = () => {
         <div className="text-center mb-4">
           <div className="logo-icon bg-indigo mx-auto mb-3" style={{ width: '36px', height: '36px', background: '#5b5df6', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 800, fontSize: '1.1rem', lineHeight: '36px' }}>F</div>
           <h4 className="text-white font-weight-extrabold mb-1" style={{ letterSpacing: '-0.5px' }}>Sign In</h4>
-          <p className="text-secondary small">Access the FlowShift Operations Platform</p>
+          <p className="text-secondary small">Access the FinTransit Operations Platform</p>
         </div>
 
         {error && (

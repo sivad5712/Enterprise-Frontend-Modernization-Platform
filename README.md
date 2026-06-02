@@ -26,23 +26,22 @@ The application federates **four distinct frontend technologies** (React.js, Ang
 1. [Executive Summary](#-executive-summary)
 2. [The Business Problem](#-the-business-problem)
 3. [The Enterprise Solution](#-the-enterprise-solution)
-4. [Why This Project Is Unique](#-why-this-project-is-unique)
-5. [Why Multiple Technologies in One Platform?](#-why-multiple-technologies-in-one-platform)
-6. [Technology Stack & Roles](#-technology-stack--roles)
-7. [System Architecture (Mermaid)](#-system-architecture-mermaid)
-8. [Micro-Frontend Strategy](#-micro-frontend-strategy)
-9. [Repository Structure](#-repository-structure)
-10. [Application & Module Breakdown](#-application--module-breakdown)
-11. [Shared Design System & API Layer](#-shared-design-system--api-layer)
-12. [Key Core Features](#-key-core-features)
-13. [Screenshots](#-screenshots)
-14. [Local Setup & Run Commands](#-local-setup--run-commands)
-15. [Build & Test Suites](#-build--test-suites)
-16. [Vercel Deployment Instructions](#-vercel-deployment-instructions)
-17. [Non-Functional Requirements (Accessibility, Performance, Security)](#-non-functional-requirements)
-18. [Frontend Modernization Roadmap](#-frontend-modernization-roadmap)
-19. [Resume & Interview Talking Points](#-resume--interview-talking-points)
-20. [Production Grade Improvements](#-what-i-would-improve-in-production)
+4. [Why Multiple Technologies in One Platform?](#-why-multiple-technologies-in-one-platform)
+5. [Technology Stack & Roles](#-technology-stack--roles)
+6. [System Architecture (Mermaid)](#-system-architecture-mermaid)
+7. [Micro-Frontend Strategy](#-micro-frontend-strategy)
+8. [Repository Structure](#-repository-structure)
+9. [Application & Module Breakdown](#-application--module-breakdown)
+10. [Shared Design System & API Layer](#-shared-design-system--api-layer)
+11. [Key Core Features](#-key-core-features)
+12. [Screenshots](#-screenshots)
+13. [Local Setup & Run Commands](#-local-setup--run-commands)
+14. [Build & Test Suites](#-build--test-suites)
+15. [Vercel Deployment Instructions](#-vercel-deployment-instructions)
+16. [Non-Functional Requirements (Accessibility, Performance, Security)](#-non-functional-requirements)
+17. [Frontend Modernization Roadmap](#-frontend-modernization-roadmap)
+18. [Resume & Interview Talking Points](#-resume--interview-talking-points)
+19. [Production Grade Improvements](#-what-i-would-improve-in-production)
 
 ---
 
@@ -64,16 +63,6 @@ FinTransit bridges these silos into a single, high-contrast **Operations Command
 * **Central Host**: A lightweight React container handles authentication, route structures, and global user states.
 * **Unified Telemetry**: Live metric cards display Total Customers, Active Accounts, daily transaction volumes, and critical alerts.
 * **Cohesive UX**: A Stripe/Linear-style layout ensures absolute visual consistency, featuring rounded Notion-style cards, smooth hover tilts, and extreme typography contrast.
-
----
-
-## 🦄 Why This Project Is Unique
-Unlike standard portfolio apps, FinTransit implements **active system configuration controls**:
-1. **Interactive Platform Onboarding**: A glassmorphic step-by-step tour carousel explaining the architecture.
-2. **One-Click Guest Authentication**: A fast-track bypass button allowing recruiters to explore all dashboards instantly.
-3. **Stateful Gateway Stress Test Simulator**: Recruiter controls to simulate environmental load stress (Low, Medium, High) which dynamically updates alerts, memory footprints, and latency values across the frameworks in real time.
-4. **AES-256 Encryption Toggle**: Instantly encrypts telemetry latency pings into secure hash signatures across all frameworks.
-5. **Monospace Audit Logger**: A live system terminal capturing cryptographic handshakes and socket reset events.
 
 ---
 
@@ -107,19 +96,19 @@ FinTransit links the modules through a shared domain layer, allowing asset and c
 
 ```mermaid
 graph TD
-    subgraph Host Shell Layer
+    subgraph HostShellLayer ["Host Shell Layer"]
         ReactShell[React Host Shell <br> apps/react-host-platform]
         Router[React Router v6]
         Auth[RequireAuth Session Guard]
     end
 
-    subgraph Federated Module Layer
+    subgraph FederatedModuleLayer ["Federated Module Layer"]
         AngularMFE[Angular Clinical Care Sandbox <br> apps/angular-healthcare-module]
         VueMFE[Vue Cloud Ops Telemetry <br> apps/vue-cloud-ops-module]
         jQueryMFE[jQuery Legacy CRM Adapter <br> apps/jquery-legacy-admin-module]
     end
 
-    subgraph Shared Core Layer (shared/)
+    subgraph Shared ["Shared Core Layer (shared/)"]
         API[shared/mock-api <br> Simulated Delay Network]
         Types[shared/types <br> TypeScript Interfaces]
         Styles[shared/styles <br> Global Sass Tokens]

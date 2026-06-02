@@ -16,7 +16,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, onOpenTour })
       <div className="sidebar-header">
         <div className="logo-container">
           <div className="logo-icon" style={{ background: '#6366f1', width: '24px', height: '24px', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.85rem', color: 'white' }}>F</div>
-          <span className="logo-text">FlowShift</span>
+          <span className="logo-text">FinTransit</span>
         </div>
         <button className="btn-close btn-close-white d-md-none" onClick={onClose}></button>
       </div>

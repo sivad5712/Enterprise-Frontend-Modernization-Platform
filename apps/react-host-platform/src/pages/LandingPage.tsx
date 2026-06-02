@@ -25,7 +25,7 @@ export const LandingPage: React.FC = () => {
       <nav className="landing-nav" style={{ backgroundColor: '#06070a', borderBottom: '1px solid rgba(255,255,255,0.05)', height: '70px' }}>
         <div className="logo-container">
           <div className="logo-icon" style={{ background: '#6366f1', width: '28px', height: '28px', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.9rem', color: 'white' }}>F</div>
-          <span className="logo-text" style={{ fontSize: '0.95rem', fontWeight: 700, letterSpacing: '-0.3px', color: 'white' }}>FlowShift Console</span>
+          <span className="logo-text" style={{ fontSize: '0.95rem', fontWeight: 700, letterSpacing: '-0.3px', color: 'white' }}>FinTransit Console</span>
         </div>
         <div className="d-flex align-items-center gap-2">
           <button 
@@ -183,7 +183,7 @@ export const LandingPage: React.FC = () => {
 
       {/* Visual Indicator Overview Footer */}
       <footer className="py-4 text-center border-top border-secondary border-opacity-10 text-secondary" style={{ fontSize: '0.78rem' }}>
-        <span>Powered by FlowShift Systems © 2026. All rights secured.</span>
+        <span>Powered by FinTransit Systems © 2026. All rights secured.</span>
       </footer>
 
       {/* Interactive Platform Tour Modal */}
