@@ -15,6 +15,13 @@ The application federates **four distinct frontend technologies** (React.js, Ang
 
 ---
 
+## 🔗 Quick Links & Live Demo
+
+* **⚡ Live Production Site**: [https://enterprise-frontend-modernization-p.vercel.app](https://enterprise-frontend-modernization-p.vercel.app)
+* **📦 GitHub Repository**: [https://github.com/sivad5712/Enterprise-Frontend-Modernization-Platform](https://github.com/sivad5712/Enterprise-Frontend-Modernization-Platform)
+
+---
+
 ## 📖 Table of Contents
 1. [Executive Summary](#-executive-summary)
 2. [The Business Problem](#-the-business-problem)
