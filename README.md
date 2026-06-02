@@ -235,11 +235,11 @@ Guarantees clean, decoupled API contracts across all standalone apps.
 
 ### 📊 Operations CommandCenter Dashboard
 Presents an executive dashboard, Recharts Area charts, recent logs, and the MFE gateway controls.
-![FinTransit CommandCenter Dashboard](/Users/SivaD/Desktop/enterprise-frontend-modernization-platform/screenshots/command-center-dashboard.png)
+![FinTransit CommandCenter Dashboard](screenshots/command-center-dashboard.png)
 
 ### 💻 Modern SaaS Landing Page with 3D Stack Graphic
 Features a minimalist dark layout and a floating 3D perspective micro-frontend stack.
-![FinTransit Landing Page](/Users/SivaD/Desktop/enterprise-frontend-modernization-platform/screenshots/landing-page.png)
+![FinTransit Landing Page](screenshots/landing-page.png)
 
 ---
 
