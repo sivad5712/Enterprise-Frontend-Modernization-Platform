@@ -9,16 +9,15 @@
 [![Vercel](https://img.shields.io/badge/Vercel-Live_Demo-black?style=flat-square&logo=vercel)](https://enterprise-frontend-modernization-p.vercel.app)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Top_1%25-gold?style=flat-square)](#)
 
-> **FinTransit** is a premium, production-grade **Frontend Modernization Command Center** built by a Senior Software Engineer (8+ years of experience). It serves as a flagship portfolio project demonstrating advanced micro-frontend orchestration, legacy-to-modern codebase migrations, and unified design token architectures.
+> **FinTransit** is a production-grade **Frontend Modernization Command Center** built by a Senior Software Engineer (8+ years of experience). It serves as a flagship portfolio project demonstrating advanced micro-frontend orchestration, legacy-to-modern codebase migrations, and unified design token architectures.
 
-The application federates **four distinct frontend technologies** (React.js, Angular 17, Vue 3, and legacy jQuery) running concurrently inside a single viewport, managed by a centralized React host portal. Inspired by the minimal, high-contrast aesthetics of **Stripe, Linear, and Vercel**, the application is built to be instantly understood by recruiters and hiring managers within 10 seconds of opening, while containing deep technical architecture under the hood.
+The application demonstrates about **four distinct frontend technologies** (React.js, Angular 17, Vue 3, and legacy jQuery) running concurrently inside a single viewport, managed by a centralized React host portal. Inspired by the minimal, high-contrast aesthetics of **Stripe, Linear, and Vercel**, the application is built to be instantly understood by recruiters and hiring managers within 10 seconds of opening, while containing deep technical architecture under the hood.
 
 ---
 
 ## 🔗 Quick Links & Live Demo
 
 * **⚡ Live Production Site**: [https://enterprise-frontend-modernization-p.vercel.app](https://enterprise-frontend-modernization-p.vercel.app)
-* **📦 GitHub Repository**: [https://github.com/sivad5712/Enterprise-Frontend-Modernization-Platform](https://github.com/sivad5712/Enterprise-Frontend-Modernization-Platform)
 
 ---
 
@@ -352,7 +351,7 @@ gantt
 
 ---
 
-## 🛡️ What I Would Improve in Production
+## 🛡️ Next Steps To Improve in Production
 * **Vite Module Federation**: In a real production system, use Webpack Module Federation or Vite plugins to load sub-applications dynamically at runtime over network boundaries rather than compiling them in a local workspace.
 * **Single Sign-On (SSO)**: Replace local auth simulations with a unified OAuth2/OIDC gateway (like Keycloak or Auth0) that handles user identity claims across all micro-frontends.
 * **Global State Syncing**: Integrate a shared lightweight Redux or Custom Event Broker to sync telemetry updates across application bundles without manual storage checks.
